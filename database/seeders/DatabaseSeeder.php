@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
 use App\Models\Offer;
 use App\Models\User;
 use DB;
@@ -22,14 +20,14 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
-        //создаём администратора 
+        ////создаём администратора 
         // DB::table('users')->insert([
         //     'name' => 'admin', 'email' => 'admin@dom.ru', 'role' => 'admin', 'email_verified_at' => now(), 
         //     'password' => static::$password ??= Hash::make('12345678'), 
         //     'remember_token' => Str::random(3) 
         // ]);
 
-        // создаём 10 вебмастеров
+        ////  создаём 10 вебмастеров
         // \App\Models\User::factory()
         // ->count(10)
         // ->sequence(fn (Sequence $sequence) => ['name' => 'webmaster'.$sequence->index+1])
@@ -42,7 +40,7 @@ class DatabaseSeeder extends Seeder
         //     ])
         // ->create();
 
-         // создаём 10 рекламодаталей
+        //// создаём 10 рекламодаталей
         // \App\Models\User::factory()
         // ->count(10)
         // ->sequence(fn (Sequence $sequence) => ['name' => 'advertiser'.$sequence->index+1])
@@ -55,7 +53,7 @@ class DatabaseSeeder extends Seeder
         //     ])
         // ->create();
 
-        //темы офферов
+        ////темы офферов
         // \App\Models\Topic::factory()
         // ->count(7)
         // ->sequence(
@@ -69,11 +67,11 @@ class DatabaseSeeder extends Seeder
         // )
         // ->create();
 
-        // офферы
+        //// офферы
       // \App\Models\Offer::factory(10)->create();
 
 
-        // присваиваем каждому офферу создателя с ролью advertiser
+        //// присваиваем каждому офферу создателя с ролью advertiser
         // \App\Models\OfferUser::factory()
         // ->count(10)
         // ->sequence(fn (Sequence $sequence) => ['offer_id' => $sequence->index+1])
@@ -82,34 +80,10 @@ class DatabaseSeeder extends Seeder
         //     ))
         // ->create();
 
-        //распределяем вебмастеров по офферам
+        ////распределяем вебмастеров по офферам
         // \App\Models\OfferUser::factory(10)->create();
         
-        // наполняем таблицу clicks. Выбираем только пользователей - webмастеров
-        \App\Models\Click::factory(30)->create();
+        //// наполняем таблицу clicks. Выбираем только пользователей - webмастеров
+        //\App\Models\Click::factory(30)->create();
     }
 }
-
-
-
-
-
-
-
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-
-        // \App\Models\Click::factory()
-        // ->count(10)
-        // ->state(new Sequence(
-        //     fn () => ['user_id' => User::inRandomOrder()->where('role', 'webmaster')->first()->id],
-        //     ))
-        // ->state(new Sequence(
-        //     fn () => ['offer_id' => Offer::inRandomOrder()->first()->id],
-        //     ))
-        // ->create();  

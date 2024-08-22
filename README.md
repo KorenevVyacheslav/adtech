@@ -108,7 +108,7 @@
 
 * ORM Eloquent
 
-* PHP 8.0
+* PHP 8.1.8
 
 * Bootstrap 5.0
 
@@ -121,14 +121,14 @@
 <pre> git clone https://github.com/KorenevVyacheslav/adtech 
 </pre>
 2. В файле *.env переопределить константы DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE для подключения к вашей БД.
-3. Выполнить команду для создания таблиц
+3. Выполнить команду
+<pre> composer update 
+</pre>
+4. Выполнить команду для создания таблиц
 <pre> php artisan migrate 
 </pre>
-4. Раскомментировать содержимое файла DatabaseSeeder.php. Для наполнения таблиц выполнить команду
+5. Раскомментировать содержимое файла DatabaseSeeder.php. Для наполнения таблиц выполнить команду
 <pre> php artisan db:seed
-</pre>
-5. Выполнить команду
-<pre> composer update 
 </pre>
 
 Пароль у всех пользователей: 12345678
